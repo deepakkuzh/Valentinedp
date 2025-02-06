@@ -1,4 +1,3 @@
-/* General styles */
 body {
   background: black;
   margin: 0;
@@ -10,23 +9,12 @@ body {
   flex-direction: column;
   color: white;
   font-family: Arial, sans-serif;
-  text-align: center;
 }
 
-/* Container for SVG & Message */
 .container {
-  width: 90%;
-  max-width: 400px; /* Limits size on large screens */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-/* SVG Animation */
-.animated-svg {
-  width: 100%;
-  height: auto;
   max-width: 300px;
+  width: 100%;
+  text-align: center;
 }
 
 #XMLID_226_ {
@@ -35,48 +23,33 @@ body {
 
 @keyframes draw {
   from {
-    stroke-dashoffset: 600;
+    stroke-dashoffset: 600; /* Path is hidden */
   }
   to {
-    stroke-dashoffset: 0;
+    stroke-dashoffset: 0;   /* Path is fully drawn */
   }
 }
 
-/* Message Styling */
+/* Lovable Message Styling */
 .message {
   margin-top: 20px;
   font-size: 28px;
   color: #ff4081;
   font-weight: bold;
-  font-family: 'Pacifico', cursive;
+  font-family: 'Pacifico', cursive;  /* Lovable font */
   animation: fadeIn 2s ease-in-out 5s forwards;
-  opacity: 0;
-  text-shadow: 2px 2px 8px rgba(255, 64, 129, 0.7);
+  opacity: 0; /* Start hidden, will fade in after SVG animation */
+  text-align: center;
+  text-shadow: 2px 2px 8px rgba(255, 64, 129, 0.7); /* Glowing effect */
 }
 
-/* Fade-in effect */
 @keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(20px); /* Slide-up effect */
   }
   to {
     opacity: 1;
     transform: translateY(0);
-  }
-}
-
-/* Responsive Design for Smartphones */
-@media (max-width: 480px) {
-  .container {
-    max-width: 90%;
-  }
-
-  .animated-svg {
-    max-width: 250px;
-  }
-
-  .message {
-    font-size: 22px; /* Smaller text on small screens */
   }
 }
