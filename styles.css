@@ -1,4 +1,4 @@
-body {
+body{
   background: black;
   margin: 0;
   padding: 0;
@@ -6,31 +6,25 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  flex-direction: column;
   color: white;
   font-family: Arial, sans-serif;
 }
-
-.container {
+.container{
   max-width: 300px;
   width: 100%;
-  text-align: center;
+  margin: 0 auto;
 }
-
-#XMLID_226_ {
-  animation: draw 5s linear forwards;
+#XMLID_226_{
+  animation: draw 10s forwards;
 }
-
-@keyframes draw {
-  from {
-    stroke-dashoffset: 600; /* Path is hidden */
-  }
+ 
+ @keyframes draw {
+  from{}
+ 
   to {
-    stroke-dashoffset: 0;   /* Path is fully drawn */
+    stroke-dashoffset: 0;
   }
 }
-
-/* Lovable Message Styling */
 .message {
   margin-top: 20px;
   font-size: 28px;
@@ -40,7 +34,6 @@ body {
   animation: fadeIn 2s ease-in-out 5s forwards;
   opacity: 0; /* Start hidden, will fade in after SVG animation */
   text-align: center;
-  text-shadow: 2px 2px 8px rgba(255, 64, 129, 0.7); /* Glowing effect */
 }
 
 @keyframes fadeIn {
