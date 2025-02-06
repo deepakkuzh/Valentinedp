@@ -1,4 +1,5 @@
-body{
+/* General styles */
+body {
   background: black;
   margin: 0;
   padding: 0;
@@ -6,43 +7,76 @@ body{
   justify-content: center;
   align-items: center;
   height: 100vh;
+  flex-direction: column;
   color: white;
   font-family: Arial, sans-serif;
+  text-align: center;
 }
-.container{
-  max-width: 300px;
+
+/* Container for SVG & Message */
+.container {
+  width: 90%;
+  max-width: 400px; /* Limits size on large screens */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* SVG Animation */
+.animated-svg {
   width: 100%;
-  margin: 0 auto;
+  height: auto;
+  max-width: 300px;
 }
-#XMLID_226_{
-  animation: draw 10s forwards;
+
+#XMLID_226_ {
+  animation: draw 5s linear forwards;
 }
- 
- @keyframes draw {
-  from{}
- 
+
+@keyframes draw {
+  from {
+    stroke-dashoffset: 600;
+  }
   to {
     stroke-dashoffset: 0;
   }
 }
+
+/* Message Styling */
 .message {
   margin-top: 20px;
   font-size: 28px;
   color: #ff4081;
   font-weight: bold;
-  font-family: 'Pacifico', cursive;  /* Lovable font */
+  font-family: 'Pacifico', cursive;
   animation: fadeIn 2s ease-in-out 5s forwards;
-  opacity: 0; /* Start hidden, will fade in after SVG animation */
-  text-align: center;
+  opacity: 0;
+  text-shadow: 2px 2px 8px rgba(255, 64, 129, 0.7);
 }
 
+/* Fade-in effect */
 @keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translateY(20px); /* Slide-up effect */
+    transform: translateY(20px);
   }
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+/* Responsive Design for Smartphones */
+@media (max-width: 480px) {
+  .container {
+    max-width: 90%;
+  }
+
+  .animated-svg {
+    max-width: 250px;
+  }
+
+  .message {
+    font-size: 22px; /* Smaller text on small screens */
   }
 }
