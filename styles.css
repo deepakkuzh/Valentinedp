@@ -10,6 +10,12 @@ body{
   font-family: Arial, sans-serif;
   tex-align: center;
 }
+
+.animated-svg {
+  width: 90vw;  /* Make it larger on mobile */
+  height: auto;
+  max-width: 350px; /* Increased max size */
+}
 .container{
   max-width: 300px;
   width: 100%;
