@@ -35,7 +35,6 @@ body{
   opacity: 0; /* Start hidden, will fade in after SVG animation */
   text-align: center;
 }
-
 @keyframes fadeIn {
   from {
     opacity: 0;
