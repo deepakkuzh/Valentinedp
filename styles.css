@@ -50,12 +50,18 @@ body{
 
 @media (max-width: 480px) {
   .container {
-    max-width: 90%;
+    max-width: 100%;
   }
 
   .animated-svg {
-    max-width: 250px;
+    max-width: 90vw; /* Uses more screen space */
   }
+
+  .message {
+    font-size: 28px; /* Bigger text for mobile */
+  }
+}
+
 
   .message {
     font-size: 22px; /* Smaller text on small screens */
